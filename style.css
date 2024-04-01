@@ -2,12 +2,9 @@
 RESETTING GENERAL STYLES
 --------------------*/
 
-body,
-h1,
-form,
-label,
-input,
-button {
+*,
+::before,
+::after {
   /* Reset margins and paddings */
   margin: 0;
   padding: 0;
@@ -43,6 +40,7 @@ form {
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
+  padding: 10px; /* Added padding to the form to make it more user-friendly */
 }
 
 /*--------------------
@@ -56,8 +54,7 @@ label {
 }
 
 /* Style the text input and password input fields */
-input[type="text"],
-input[type="password"] {
+input {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -66,10 +63,11 @@ input[type="password"] {
   width: 100%;
 }
 
-/* Style the hover effect for the input fields */
-input[type="text"]:hover,
-input[type="password"]:hover {
-  border-color: #333;
+input[type="text"],
+input[type="password"] {
+  &:hover {
+    border-color: #333;
+  }
 }
 
 /* Style the submit button */
@@ -82,9 +80,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
+  margin-top: 10px; /* Added margin to separate the button from the input fields */
 }
 
-/* Style the hover effect for the submit button */
 button:hover {
   background-color: #444;
 }
@@ -101,14 +99,8 @@ MEDIA QUERY FOR MOBILE
     width: 100%;
   }
 
-  /* Add padding to the form to make it more user-friendly */
-  form {
-    padding: 10px;
-  }
-
   /* Make the input fields and button more touch-friendly */
-  input[type="text"],
-  input[type="password"],
+  input,
   button {
     padding: 12px;
   }
