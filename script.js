@@ -2,8 +2,8 @@ document.getElementById('loginForm').addEventListener('submit', handleFormSubmit
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById('username').value.toLowerCase();
+  const password = document.getElementById('password').value.toLowerCase();
 
   const credentials = [
     { username: 'aab', password: 'aab', url: 'https://milanlambrinos.github.io/techdata/' },
