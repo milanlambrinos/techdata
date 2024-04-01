@@ -41,6 +41,8 @@ form {
   margin: 20px;
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
 }
 
 /*--------------------
@@ -93,6 +95,11 @@ MEDIA QUERY FOR MOBILE
 
 @media (max-width: 767px) {
   /* Adjust for smaller screens */
+
+  /* Make the form take up the full width of the screen on smaller devices */
+  form {
+    width: 100%;
+  }
 
   /* Add padding to the form to make it more user-friendly */
   form {
