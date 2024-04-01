@@ -1,41 +1,59 @@
-/* Reset styles for all elements */
+/*--------------------
+RESETTING GENERAL STYLES
+--------------------*/
+
 body,
 h1,
 form,
 label,
 input,
 button {
+  /* Reset margins and paddings */
   margin: 0;
   padding: 0;
+
+  /* Make sure all elements consider their borders and padding in their total size */
   box-sizing: border-box;
 }
 
-/* Set basic styles for the page */
+/*--------------------
+SETTING BASIC STYLES
+--------------------*/
+
+/* Set the base font for the entire document */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
 
+/* Style the page title */
 h1 {
   background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
+/* Style the form layout and structure */
 form {
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Style the form elements */
+/*--------------------
+STYLING FORM ELEMENTS
+--------------------*/
+
+/* Style the form labels */
 label {
   margin-bottom: 5px;
   font-weight: bold;
 }
 
+/* Style the text input and password input fields */
 input[type="text"],
 input[type="password"] {
   padding: 5px;
@@ -43,13 +61,16 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s;
+  width: 100%;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+/* Style the hover effect for the input fields */
+input[type="text"]:hover,
+input[type="password"]:hover {
   border-color: #333;
 }
 
+/* Style the submit button */
 button {
   background-color: #333;
   color: #fff;
@@ -58,8 +79,30 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
+/* Style the hover effect for the submit button */
 button:hover {
   background-color: #444;
+}
+
+/*--------------------
+MEDIA QUERY FOR MOBILE
+--------------------*/
+
+@media (max-width: 767px) {
+  /* Adjust for smaller screens */
+
+  /* Add padding to the form to make it more user-friendly */
+  form {
+    padding: 10px;
+  }
+
+  /* Make the input fields and button more touch-friendly */
+  input[type="text"],
+  input[type="password"],
+  button {
+    padding: 12px;
+  }
 }
