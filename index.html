@@ -10,9 +10,9 @@
     <h1>Tech Data Login</h1>
     <form id="loginForm">
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
+      <input type="text" id="username" name="username" required oninput="this.value = this.value.toLowerCase();"><br><br>
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
+      <input type="password" id="password" name="password" required oninput="this.value = this.value.toLowerCase();"><br><br>
       <button type="submit">Login</button>
     </form>
     <script>
