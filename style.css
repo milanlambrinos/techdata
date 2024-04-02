@@ -20,7 +20,9 @@ SETTING BASIC STYLES
 /* Set the base font for the entire document */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(45deg, #f6d365, #fda085);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Define color variables for easy design changes */
@@ -29,17 +31,35 @@ body {
   --secondary-color: #444;
   --light-color: #f5f5f5;
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-1: #f6d365;
+  --gradient-2: #fda085;
 }
 
 /* Style the page title */
 h1 {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: h1-anim 5s ease infinite;
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+@keyframes h1-anim {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Style the form layout and structure */
@@ -53,6 +73,7 @@ form {
   background-color: var(--light-color);
   border-radius: 5px;
   box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color 0.3s;
 }
 
 /*--------------------
@@ -71,7 +92,7 @@ input {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, padding 0.3s;
   width: 100%;
 }
 
@@ -79,6 +100,7 @@ input[type="text"]:focus,
 input[type="password"]:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 2px var(--primary-color);
+  padding: 10px;
 }
 
 /* Style the submit button */
@@ -92,44 +114,4 @@ button {
   transition: background-color 0.3s;
   width: 100%;
   margin-top: 10px;
-  box-shadow: 0 2px 5px var(--shadow-color);
-}
-
-button:hover {
-  background-color: var(--secondary-color);
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 2px var(--secondary-color);
-}
-
-/*--------------------
-MEDIA QUERY FOR MOBILE
---------------------*/
-
-@media (max-width: 767px) {
-  /* Adjust for smaller screens */
-
-  /* Make the form take up the full width of the screen on smaller devices */
-  form {
-    width: 100%;
-  }
-
-  /* Make the input fields and button more touch-friendly */
-  input,
-  button {
-    padding: 12px;
-  }
-}
-
-/* Add a simple animation to input fields when they are focused */
-input:focus {
-  animation: input-focus 0.2s;
-}
-
-@keyframes input-focus {
-  0% {
-    box-shadow: 0 0 2px var(--primary-color);
-  }
-  
+  box-shadow: 0 2px 5px var(
