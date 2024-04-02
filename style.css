@@ -19,8 +19,17 @@ SETTING BASIC STYLES
 
 /* Set the base font for the entire document */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f0f0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* Style the page title */
@@ -31,6 +40,7 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   border-radius: 5px;
+  width: 100%;
 }
 
 /* Style the form layout and structure */
@@ -38,9 +48,21 @@ form {
   margin: 20px;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px; /* Added padding to the form to make it more user-friendly */
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form header */
+form h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 /*--------------------
@@ -49,14 +71,14 @@ STYLING FORM ELEMENTS
 
 /* Style the form labels */
 label {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
 /* Style the text input and password input fields */
 input {
-  padding: 5px;
-  margin-bottom: 10px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s;
@@ -68,19 +90,25 @@ input[type="password"] {
   &:hover {
     border-color: #333;
   }
+
+  &:focus {
+    outline: none;
+    border-color: #444;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Style the submit button */
 button {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 0.75rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
-  margin-top: 10px; /* Added margin to separate the button from the input fields */
+  margin-top: 1rem;
 }
 
 button:hover {
@@ -102,6 +130,6 @@ MEDIA QUERY FOR MOBILE
   /* Make the input fields and button more touch-friendly */
   input,
   button {
-    padding: 12px;
+    padding: 1rem;
   }
 }
