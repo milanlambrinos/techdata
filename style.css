@@ -45,14 +45,11 @@ h1 {
 
 /* Style the form layout and structure */
 form {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 600px;
-  padding: 1rem;
-  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -132,4 +129,9 @@ MEDIA QUERY FOR MOBILE
   button {
     padding: 1rem;
   }
-}
+
+  /* Make the form fields more readable on mobile devices */
+  form label,
+  form input,
+  form button {
+    font-size
