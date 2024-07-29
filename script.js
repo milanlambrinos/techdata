@@ -31,6 +31,8 @@ function handleFormSubmit(event) {
     { username: 'thp', password: 'thp', url: 'https://milanlambrinos.github.io/techdata/' },
     { username: 'vcp', password: 'vcp', url: 'https://milanlambrinos.github.io/techdata/' },
     { username: 'wmc', password: 'wmc', url: 'https://milanlambrinos.github.io/techdata/' },
+    { username: 'cgf', password: 'cgf', url: 'https://milanlambrinos.github.io/techdata/' },
+    { username: 'rc%', password: 'rc%', url: 'https://milanlambrinos.github.io/techdata/' },
   ];
 
   const credential = credentials.find(
