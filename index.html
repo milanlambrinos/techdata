@@ -15,6 +15,11 @@
       <input type="password" id="password" name="password" required oninput="this.value = this.value.toLowerCase();"><br><br>
       <button type="submit">Login</button>
     </form>
+     <h2>Reports</h2>
+    <!-- Button to redirect to the live report page -->
+    <button onclick="window.location.href='https://app.powerbi.com/reportEmbed?reportId=15073126-8837-424d-b39e-ecce482512cf&autoAuth=true&ctid=0a031b78-82e2-45df-9e25-567ecfa24158'">
+      View Live Report
+    </button>
     <script>
       document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -78,8 +83,7 @@
           window.location.href = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSTwCZsox0QNXGBhagnE8CeXu76cYvZClDC-BubDkd2OnXhKMVXyLDT3VyWq32VL0ogXFIckiykWEtU/pubhtml?gid=1881116496&single=true';
         } else if (username === 'rc%' && password === 'rc%') {
           window.location.href = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQO29tvE5XzrqUH8Zssu6o986oCWoGc7_m3NwCpGFmhABViT42pwv6bR6emMexZqATqSvYg-VV8LM1u/pubhtml?gid=1428359766&single=true';
-        } else if (username === 'test' && password === 'test') {
-          window.location.href = 'https://app.powerbi.com/reportEmbed?reportId=15073126-8837-424d-b39e-ecce482512cf&autoAuth=true&ctid=0a031b78-82e2-45df-9e25-567ecfa24158';
+  
         } else {
           alert('Invalid username or password- see Milan (781) 709-3500');
         }
