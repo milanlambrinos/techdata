@@ -15,11 +15,10 @@
       <input type="password" id="password" name="password" required oninput="this.value = this.value.toLowerCase();"><br><br>
       <button type="submit">Login</button>
     </form>
-     <h2>Reports</h2>
-    <!-- Button to redirect to the live report page -->
-    <button onclick="window.location.href='https://app.powerbi.com/reportEmbed?reportId=15073126-8837-424d-b39e-ecce482512cf&autoAuth=true&ctid=0a031b78-82e2-45df-9e25-567ecfa24158'">
-      View Live Report
-    </button>
+      <br><br>
+
+    <!-- Button to Redirect to the Report -->
+    <button onclick="window.location.href='report.html';">View Live Report</button>
     <script>
       document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
